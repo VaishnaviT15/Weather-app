@@ -5,9 +5,6 @@ import requests
 HEIGHT = 600
 WIDTH = 800
 root = tk.Tk()
-# 2983534f295686404717f64eceb0c1f9
-#api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
-#api.openweathermap.org/data/2.5/forecast?q={city name}&appid={your api key}
 root.title('Weather app')
 def on_enter(e):
     button.configure(bg='#e68a00',fg='white')
@@ -33,7 +30,7 @@ def format_response(weather):
     return final_str
 
 def get_weather(city):
-    weather_key ='2983534f295686404717f64eceb0c1f9'
+    weather_key ='yourkey'
     url= 'https://api.openweathermap.org/data/2.5/weather'
     params  = {'APPID':weather_key,'q':city,'units':'imperial'}
     response  = requests.get(url,params=params)
